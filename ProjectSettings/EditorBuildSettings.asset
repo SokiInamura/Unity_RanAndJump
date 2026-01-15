@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/01_Nakazawa.unity
+    guid: 449e32f2449129e40926d7df21ed8223
+  - enabled: 1
+    path: Assets/Scenes/02_Inamura.unity
+    guid: 31fae80abe37a3f49825025c5d78265f
+  - enabled: 1
+    path: Assets/Scenes/03_Sudou.unity
+    guid: 5c1864240bb312f4a94db9a3c20ddc13
+  - enabled: 1
+    path: Assets/Scenes/04_Inoue.unity
+    guid: d1027efa68c5bf1468e201c1ee658ad1
+  - enabled: 1
+    path: Assets/Scenes/05_Onodera.unity
+    guid: f5dca76abd5c40d409d77ec3a0122b05
+  - enabled: 1
+    path: Assets/Scenes/06_Uemura.unity
+    guid: fdf39523d94281d4c8cd10cf9a6ba3e1
   m_configObjects: {}
