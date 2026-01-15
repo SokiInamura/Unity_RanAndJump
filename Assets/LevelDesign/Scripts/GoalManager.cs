@@ -28,14 +28,52 @@ public class GoalManager : MonoBehaviour
             //テキストの内容を変更する
             text.GetComponent<Text>().text = "ゴール！";
             text.SetActive(true);            //テキストをオンにして非表示→表示にする
-            isGoal = true;            //Goal判定をTrueにする
+
+            Scene loadScene = SceneManager.GetActiveScene();        // 現在のScene名を取得する
+
+            switch (loadScene.name)
+            {
+                case "01_Nakazawa":
+                    SceneManager.LoadScene("02_Inamura");        // Sceneの読み直し
+                    text.SetActive(false);
+
+                    break;
+
+                case "02_Inamura":
+                    SceneManager.LoadScene("03_Sudou");        // Sceneの読み直し
+                    text.SetActive(false);
+
+                    break;
+
+                case "03_Sudou":
+                    SceneManager.LoadScene("04_Inoue");        // Sceneの読み直し
+                    text.SetActive(false);
+
+                    break;
+
+                case "04_Inoue":
+                    SceneManager.LoadScene("05_Onodera");        // Sceneの読み直し
+                    text.SetActive(false);
+
+                    break;
+
+                case "05_Onodera":
+                    SceneManager.LoadScene("06_Uemura");        // Sceneの読み直し
+                    text.SetActive(false);
+
+                    break;
+
+                case "06_Uemura":
+                    isGoal = true;            //Goal判定をTrueにする
+
+                    break;
+            }
         }
     }
 
     //シーンを再読み込みする
     private void Restart()
     {
-        Scene loadScene = SceneManager.GetActiveScene();        // 現在のScene名を取得する
-        SceneManager.LoadScene(loadScene.name);        // Sceneの読み直し
+        SceneManager.LoadScene("01_Nakazawa");        // Sceneの読み直し
     }
 }
