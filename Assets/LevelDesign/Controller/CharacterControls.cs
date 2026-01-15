@@ -143,6 +143,7 @@ public class CharacterControls : MonoBehaviour {
 				slide = false;
 			}
 		}
+		
 	}
 
 	float CalculateJumpVerticalSpeed () {

@@ -10,7 +10,9 @@ public class TimeManager : MonoBehaviour
     public float limit = 45.0f;    //制限時間
     public GameObject text;    //ゲームオーバー表示用テキスト
     public GameObject player;    //プレイヤー格納用
-    private bool isGameOver = false;    //ゲームオーバー判定
+    public bool isGameOver = false;    //ゲームオーバー判定
+    private GameObject goalObject;
+    GoalManager goalManager;
 
     void Start()
     {
@@ -19,6 +21,9 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
+        goalObject = GameObject.Find("Goal");
+        goalManager = goalObject.GetComponent<GoalManager>();
+
         //ゲームオーバー状態で画面がクリックされたとき
         if (isGameOver && Input.GetMouseButton(0))
         {
@@ -35,9 +40,13 @@ public class TimeManager : MonoBehaviour
             return;
         }
 
-        //時間をカウントダウンする
-        limit -= Time.deltaTime;
-        timeText.text = "Time:" + limit.ToString("f1") + "秒";
+        // ゴールしてないとき
+        if (goalManager.isGoal == false)
+        {
+            //時間をカウントダウンする
+            limit -= Time.deltaTime;
+            timeText.text = "Time:" + limit.ToString("f1") + "秒";
+        }
     }
 
     //シーンを再読み込みする

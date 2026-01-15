@@ -8,7 +8,9 @@ public class GoalManager : MonoBehaviour
 {
     public GameObject player;    //プレイヤーを格納するための変数
     public GameObject text;    　//テキストを格納するための変数
-    private bool isGoal = false;    //Goalしたかどうか判定する
+    public bool isGoal = false;    //Goalしたかどうか判定する
+    private GameObject timeObject;
+    TimeManager timeManager;
 
     void Update()
     {
@@ -22,8 +24,11 @@ public class GoalManager : MonoBehaviour
     //当たり判定関数
     private void OnTriggerEnter(Collider other)
     {
+        timeObject = GameObject.Find("TimeManager");
+        timeManager = timeObject.GetComponent<TimeManager>();
+
         //当たってきたオブジェクトの名前がプレイヤーの名前と同じとき
-        if (other.name == player.name)
+        if (other.name == player.name && timeManager.isGameOver == false)
         {
             //テキストの内容を変更する
             text.GetComponent<Text>().text = "ゴール！";
