@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TimeManager : MonoBehaviour
 {
     public Text timeText;    //時間表示用テキスト
-    public float limit = 60.0f;    //制限時間
+    public float limit = 45.0f;    //制限時間
     public GameObject text;    //ゲームオーバー表示用テキスト
     public GameObject player;    //プレイヤー格納用
     private bool isGameOver = false;    //ゲームオーバー判定
