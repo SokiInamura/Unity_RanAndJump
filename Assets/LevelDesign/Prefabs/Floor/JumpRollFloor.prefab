@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3029164393058081226}
   - component: {fileID: 3814166004235065497}
   - component: {fileID: 2352909318512367640}
-  - component: {fileID: 6274536289764389481}
+  - component: {fileID: 4356075228700518286}
   m_Layer: 0
   m_Name: Roll Grouond
   m_TagString: Untagged
@@ -109,7 +109,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6274536289764389481
+--- !u!114 &4356075228700518286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4a0a0536254b74abea858ba27666d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: -2.7
 --- !u!1 &3097629122128121861
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815562938204219372}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.34202012, z: 0, w: -0.9396926}
   m_LocalPosition: {x: 0, y: 3.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -336,9 +337,8 @@ GameObject:
   - component: {fileID: 5599870535153649069}
   - component: {fileID: 652518056120418786}
   - component: {fileID: 8663878337972902454}
-  - component: {fileID: 56483072780088292}
   m_Layer: 0
-  m_Name: Roll Grouond (2)
+  m_Name: Cylinder(4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,18 +409,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &56483072780088292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793797933410493648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4a0a0536254b74abea858ba27666d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6935104301720929945
 GameObject:
   m_ObjectHideFlags: 0

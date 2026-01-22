@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JumpToMoveGround : MonoBehaviour
 {
+    public float speed = 4;
     private bool bRotate = false;
     private int TarValue = -90;
     // Start is called before the first frame update
@@ -21,7 +22,8 @@ public class JumpToMoveGround : MonoBehaviour
         }
         if (bRotate == true)
         {
-            this.transform.Rotate(0, TarValue / -20.5f, 0);
+            this.transform.Rotate(0, (TarValue /90) *(float)speed, 0);
+
             if(TarValue == -90 && (this.transform.localEulerAngles.x <= 271 && this.transform.localEulerAngles.x >= 269))
             {
                 bRotate = false;
