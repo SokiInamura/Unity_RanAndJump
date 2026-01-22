@@ -19,6 +19,11 @@ public class GoalManager : MonoBehaviour
         {
             Restart();
         }
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {// Å‰‚©‚ç
+            SceneManager.LoadScene("01_Nakazawa");        // Scene‚Ì“Ç‚İ’¼‚µ
+        }
     }
 
     //“–‚½‚è”»’èŠÖ”
