@@ -4198,7 +4198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1329909161}
-  limit: 90
+  limit: 60
   text: {fileID: 1670007520}
   player: {fileID: 2112413753}
   isGameOver: 0
